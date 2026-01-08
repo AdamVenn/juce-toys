@@ -33,6 +33,16 @@ I use these all the time.  They are:
   
 - ValueTreeDebugger - attach this to a valuetree and a separate window will
   open where you can view (and change properties) of the tree. 
+  ```
+  #include <jcf_debug/jcf_debug.h>
+
+  struct MyState
+  {
+      juce::ValueTree state{};
+      jcf::ValueTreeDebugger vtDebugger{ state };
+  }
+  ```
+
 - BufferDebugger - one of these can be used to view a buffer (typically an
   array of floats) when debugging DSP code.  You can put a macros into your
   code at places you want to be able to inspect the buffer contents.  I wrote
