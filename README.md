@@ -70,3 +70,27 @@ A collection of parts and ideas which might be useful to people using JUCE.
 
 - adsr_editor.cpp, adsr_editor.h - is a basic, but nice looking envelope
   editor. 
+
+## How to Get it
+
+#### Cmake
+
+  - FetchContent the repo
+  - Link the module you're interested in:
+    - `target_link_libraries(target PRIVATE jcf::debug)`
+    - `target_link_libraries(target PRIVATE jcf::advanced_leak_detector)`
+    - `target_link_libraries(target PRIVATE jcf::multithreading)`
+
+ or
+
+  - Clone the repo
+  - `add_subdirectory()`
+    - Link the module you're interested in:
+    - `target_link_libraries(target PRIVATE jcf::debug)`
+    - `target_link_libraries(target PRIVATE jcf::advanced_leak_detector)`
+    - `target_link_libraries(target PRIVATE jcf::multithreading)`
+
+#### Projucer
+  - Clone the repo
+  - Add module `juce-toys/jcf_debug`
+
